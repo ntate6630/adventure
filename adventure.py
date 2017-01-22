@@ -7,6 +7,13 @@ directions = {
     'south': (0, 1),
 }
 
+map_data = {
+    (0, 0): 'H',
+    (0, 1): 'L',
+    (1, 0): 'P',
+    (1, 1): 'M'
+}
+
 position = (0, 0)
 
 while True:
@@ -20,6 +27,8 @@ while True:
         if possible_location:
             print 'to the %s is a %s' % (k, possible_location)
             valid_directions[k] = possible_position
+
+    print '[%s]' % (map_data[position])
 
 
     direction = raw_input('which direction do you want to go?\n')
